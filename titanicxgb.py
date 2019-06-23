@@ -73,7 +73,8 @@ for df in combine:
     df['Title'] = df.Name.str.extract(' ([A-Za-z]+)\.', expand=False)
     
     #convert the french names and the 'rare' titles like Rev or Don into general categories
-    df['Title'] = df['Title'].replace(['Lady', 'Countess','Capt', 'Col',                                                 'Don', 'Dr', 'Major', 'Rev', 'Sir', 'Jonkheer', 'Dona'], 'Rare')
+    df['Title'] = df['Title'].replace(['Lady', 'Countess','Capt', 'Col',\
+    	'Don','Dr','Major', 'Rev', 'Sir', 'Jonkheer', 'Dona'], 'Rare')
     df['Title'] = df['Title'].replace('Mlle', 'Miss')
     df['Title'] = df['Title'].replace('Ms', 'Miss')
     df['Title'] = df['Title'].replace('Mme', 'Mrs')
